@@ -8,6 +8,11 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=False)
 
+class TokenBlockedList(db.Model)
+    __tablename__="token_black_list"
+    id=db.Column(db.Integer, primary_key=True)
+    jti=db.Column(db.String, nullable=False)
+
     def __repr__(self):
         return f'<User {self.email}>'
 
