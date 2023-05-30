@@ -5,3 +5,18 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+.main-title{
+    font-size: 20rem;
+    background: -webkit-linear-gradient(#4CB944, #4472CA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width:100%;
+    margin-top: 25%;
+}
+.title-section
+{
+    min-height: 30rem;
+    border-radius: 2rem;
+}

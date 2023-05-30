@@ -1,3 +1,25 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+/* in progress */
+.sub-section{
+    min-height: 10rem;
+}
+/* in progress */
+.sub-title{
+    font-size: 5rem;
+    background: -webkit-linear-gradient(90deg,#4CB944, #4472CA, #4CB944);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* done */
+body{
+    background-color: #ccfbff;
+opacity: 1;
+background-image:  radial-gradient(#54d597 2px, transparent 2px), radial-gradient(#3ba270 2px, #9CE2F3 2px);
+background-size: 80px 80px;
+background-position: 0 0,40px 40px;
+}
+/* done */
+#navbar-design{
+    background-image: linear-gradient(90deg, #9CE2F3 0%, #F7ECE1 8%, #9CE2F3 50%, #F7ECE1 90%, #9ce2f3 100%);
+    background-color: linear-gradient(90deg, #9CE2F3 0%, #F7ECE1 8%, #9CE2F3 50%, #F7ECE1 90%, #9ce2f3 100%);
+}
