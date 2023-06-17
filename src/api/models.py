@@ -12,16 +12,16 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
-    is_active = db.Column(db.Boolean(), nullable=False)
+    #is_active = db.Column(db.Boolean(), nullable=False)
     first_name = db.Column(db.String(120), nullable=False)
     last_name = db.Column(db.String(120), nullable=False)
     birthday = db.Column(db.String(120), nullable=False)
     gender = db.Column(db.String(120), nullable=False)
     phone = db.Column(db.Integer, unique=True, nullable=False)
     address = db.Column(db.String(300), unique=False, nullable=False)
-    address_detail = db.Column(db.String(300), unique=False, nullable=False)
-    # suscription = db.Column(db.Boolean(), nullable=False)
-    pedidos = db.relationship("Pedidos")
+    address_detail = db.Column(db.String(300), unique=False, nullable=True)
+    #suscription_info = db.Column(db.Boolean(), nullable=True)
+    #pedidos = db.relationship("Pedidos")
     profile_pic = db.Column(db.String(500))
 
     def __repr__(self):
@@ -39,13 +39,13 @@ class User(db.Model):
         return {
             "id": self.id,
             "email": self.email,
-            "is_active": self.is_active,
+            #"is_active": self.is_active,
             "first_name": self.first_name,
             "last_name": self.last_name,
             "birthday": self.birthday,
             "gender": self.gender,
             "phone": self.phone,
-            "suscription": self.suscription,
+            #"suscription_info": self.suscription_info,
             "address": self.address,
             "address_details": self.address_details,
             "profile_pic": picture_url

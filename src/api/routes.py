@@ -114,7 +114,7 @@ def user_create():
     new_user = User(
         email=data["email"],
         password=secure_password,
-        is_active=True,
+        #is_active=True,
         first_name=data["first_name"],
         last_name=data["last_name"],
         birthday=data["birthday"],
@@ -122,7 +122,7 @@ def user_create():
         phone=data["phone"],
         address=data["address"],
         address_details=data["address_details"],
-        suscription=data["suscription"],
+        #suscription=data["suscription"],
     )
     db.session.add(new_user)
     db.session.commit()
