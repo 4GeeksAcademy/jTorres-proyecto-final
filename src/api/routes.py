@@ -120,7 +120,7 @@ def user_create():
     new_user = User(
         email=data["email"],
         password=secure_password,
-        # is_active=True,
+        is_active=True,
         first_name=data["first_name"],
         last_name=data["last_name"],
         birthday=data["birthday"],
