@@ -323,11 +323,8 @@ def user_profile_pic():
 def generateChatResponse():
     prompt = request.json.get("prompt")
     messages = [
-        {
-            "role": "system",
-            "content": "Create a diet plan with the characteristics that the user is going to give you",
-        },
-        {"role": "user", "content": prompt},
+        {"role": "system", "content": "genera un esquema de alimentacion semanal, dividido por días, desayuno, almuerzo, y comida. Necesito que asistas a un cliente que te respondera en tu siguiente interacción y te pedira un consejo de dieta. Ten su consideración en cuenta e incluye pollo frito, pizza, lasagna, gnochi, ramn, arroz japones, sushi y comida rápida como hamburguesa o papas. da una explicación breve diaria para que el usuario pueda saber que comer cada día en desayuno, almuerzo y cena, teniendo una dieta balanceada y saludable"},
+        {"role": "user", "content": prompt}
     ]
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
 
