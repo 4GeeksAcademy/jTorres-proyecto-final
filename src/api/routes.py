@@ -23,7 +23,7 @@ from flask_jwt_extended import (
     get_jwt,
     get_jti,
 )
-import os,json, tempfile
+import os, json, tempfile
 import openai
 from firebase_admin import storage
 from api.sendmail import sendMail, recoveryPasswordTemplate
@@ -56,7 +56,13 @@ def user_login():
     )
 
     # Retornar el token
-    return jsonify({"accessToken": access_token, "refreshToken": refresh_token, "userInfo":user.serialize()})
+    return jsonify(
+        {
+            "accessToken": access_token,
+            "refreshToken": refresh_token,
+            "userInfo": user.serialize(),
+        }
+    )
 
 
 # Refrescar el token
@@ -114,7 +120,7 @@ def user_create():
     new_user = User(
         email=data["email"],
         password=secure_password,
-        #is_active=True,
+        # is_active=True,
         first_name=data["first_name"],
         last_name=data["last_name"],
         birthday=data["birthday"],
@@ -122,7 +128,7 @@ def user_create():
         phone=data["phone"],
         address=data["address"],
         address_details=data["address_details"],
-        #suscription=data["suscription"],
+        # suscription=data["suscription"],
     )
     db.session.add(new_user)
     db.session.commit()
@@ -313,19 +319,18 @@ def user_profile_pic():
     return jsonify({"msg": "Profile pic updated", "pictureUrl": user.get_profile_pic()})
 
 
-@api.route('/createDietChatGPT', methods=['GET','POST'])
+@api.route("/createDietChatGPT", methods=["GET", "POST"])
 def generateChatResponse():
     prompt = request.json.get("prompt")
     messages = [
-        {"role": "system", "content": "Create a diet plan with the characteristics that the user is going to give you"},
-        {"role": "user", "content": prompt}
+        {
+            "role": "system",
+            "content": "Create a diet plan with the characteristics that the user is going to give you",
+        },
+        {"role": "user", "content": prompt},
     ]
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=messages
-    )
-  
-    
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+
     try:
         answer = response.choices[0].message.content
     except:
