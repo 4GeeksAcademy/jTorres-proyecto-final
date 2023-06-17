@@ -30,10 +30,15 @@ export const FoodModal = () => {
                         <strong>{element.plateName}</strong>
                         <button className="btn btn-dark btn-outline-info align-self-end">♡</button>
                     </h1>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div classname="modal-body">
+                        <img className="img-fluid" src={element.image}></img>
+                    </div>
                     </div>
                         <div className="modal-body">
                             {element.description}
+                        </div>
+                        <div className="modal-body">
+                           Tiene un costo de {element.price} Pesos Colombianos!
                         </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

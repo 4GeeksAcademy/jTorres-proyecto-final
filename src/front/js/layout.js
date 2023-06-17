@@ -19,7 +19,8 @@ import FoodGeneral from "./component/foodGeneral.js";
 import RestaurantOverview from "./component/restaurantOverview.js";
 import SubscriptionGeneral from "./component/subscriptionGeneral.js";
 import { RecoverPassword } from "./pages/recoverPassword";
-import { ChangePassword } from "./component/changePassword";
+import Checkout from "./component/checkout";
+import OrderTracking from "./component/orderTracking";
 
 //create your first component
 const Layout = () => {
@@ -48,8 +49,8 @@ const Layout = () => {
                         <Route element={<h1>Not found!</h1>} />
                         <Route element={<SubscriptionGeneral />} path="/subscription" />
                         <Route element={<RecoverPassword />} path="/recovery" />
-                        <Route element={<ChangePassword />} path="/changepassword" />
-
+                        <Route element={<Checkout />} path="/checkout" />
+                        <Route element={<OrderTracking />} path="/order-tracking" />
                     </Routes>
                     <Footer />
                 </ScrollToTop>

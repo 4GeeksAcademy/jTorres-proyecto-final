@@ -25,6 +25,7 @@ export const Navbar = () => {
 							<li className="dropdown-item">Loot 2</li>
 							<li className="dropdown-item">Loot 3</li>
 							<li className="dropdown-item">This shalt clear thy loot</li>
+							<li className="dropdown-item"><Link to="/checkout"><button className="btn btn-success">Ir a pagar!</button></Link></li>
 						</ul>
 					</div>
 					{

@@ -28,8 +28,11 @@ export const FoodCard = () => {
                 <div className="card-body">
                     <h1 className="w-100 card-body text-light d-flex justify-content-center">
                         <strong>{element.plateName}</strong>
-                        <button className="btn btn-dark btn-outline-info align-self-end">♡</button>
                     </h1>
+                    <button className="btn btn-dark btn-outline-info align-self-end">♡</button>
+                    <Link to="/checkout">
+                        <button className="btn btn-dark btn-outline-info ms-5 px-3 fw-bold">Llévatelo!</button>
+                    </Link>
                 </div>                        
                 <div className="p-5 mt-5 w-100">
                     <p className="text-light fs-3 description-text">{element.description}</p>

@@ -40,7 +40,7 @@ export const LoginModal = () => {
                                         ""                                                                          
                                         :
                                         <Link to ="/recovery">
-                                                <button className="btn btn-outline-info text-light mx-4">Olvide mi contraseña :c</button>
+                                                <button className="btn btn-outline-info text-light mx-4" data-bs-dismiss="modal">Olvide mi contraseña :c</button>
                                         </Link>
                                 }
                                 <Link to="/register">

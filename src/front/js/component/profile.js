@@ -58,7 +58,9 @@ export const Profile = () => {
                                 {/* (username) */}
                                 <div className="mb-3">
                                     <label className="small mb-1" htmlFor="inputUsername">Nombre de usuario (como quieres que te llamemos?)</label>
-                                    <input className="form-control" id="inputUsername" type="text" placeholder="Tu Usuario" value={item.displayName}></input>
+                                    <input className="form-control" id="inputUsername" type="text" placeholder="Tu Usuario"
+                                    // ****************** onChange={()=>{actions.updateUserProfile()}} EJEMPLO****************
+                                    value={item.displayName}></input>
                                 </div>
                                 {/* Form Row */}
                                 <div className="row gx-3 mb-3">

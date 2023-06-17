@@ -5,6 +5,7 @@ import LoginModal from "../pages/loginModal";
 import "../../styles/register.css";
 import RestaurantCard from "./restaurantCard";
 import { Context } from "../store/appContext";
+import FoodModal from "./foodModal";
 
 export const FoodGeneral = () => {
     const {store, actions}= useContext(Context);

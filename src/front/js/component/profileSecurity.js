@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+import { useSearchParams } from "react-router-dom";
 import LoginModal from "../pages/loginModal";
 import "../../styles/profile.css";
 
+
 export const ProfileSecurity = () => {
+    const { store, actions } = useContext(Context);
+    let [searchParams, setSearchParams] = useSearchParams()
+	async function submitForm(e){
+        e.preventDefault()
+        let data = new FormData(e.target)
+        if(data.get("password")!==data.get("passwordConfirm"&&"passwordConfirm2")){
+            console.log("Claves no coinciden")
+            return
+        }
+        let tokenPassword=searchParams.get("token")
+        let resp = await actions.changePasswordRecovery(tokenPassword, data.get("email"))
+        if (resp>=400){
+            return 
+        }
+        console.log("Clave cambiada")
+    }
+
+    
     return (
         <div className="container-xl px-4" style={{paddingTop:"3rem", marginBottom: "25rem"}}>
             <h1 className="main-title text-center pt-5 pb-0 mb-0">Bienvenido a tu Perfil</h1>
@@ -29,23 +50,23 @@ export const ProfileSecurity = () => {
                     <div className="card mb-4 gradient-custom-contrast">
                         <div className="card-header">Cambia tu contraseña</div>
                         <div className="card-body">
-                            <form>
+                            <form onSubmit = {submitForm}>
                                 {/* Form Group (current password) */}
                                 <div className="mb-3">
                                     <label className="small mb-1" htmlFor="currentPassword">Contraseña actual</label>
-                                    <input className="form-control" id="currentPassword" type="password" placeholder="Esribe Tu Contraseña actual"></input>
+                                    <input className="form-control" id="password" name="password" type="password" placeholder="Esribe Tu Contraseña actual"></input>
                                 </div>
                                 {/* Form Group (new password) */}
                                 <div className="mb-3">
                                     <label className="small mb-1" htmlFor="newPassword">Nueva Contraseña</label>
-                                    <input className="form-control" id="newPassword" type="password" placeholder="Escribe Tu Nueva Contraseña"></input>
+                                    <input className="form-control" id="passwordConfirm" type="password" placeholder="Escribe Tu Nueva Contraseña"></input>
                                 </div>
                                 {/* Form Group (confirm password) */}
                                 <div className="mb-3">
                                     <label className="small mb-1" htmlFor="confirmPassword">Confirma tu Nueva Contraseña</label>
-                                    <input className="form-control" id="confirmPassword" type="password" placeholder="Confirma tu Nueva Contraseña"></input>
+                                    <input className="form-control" id="passwordConfirm2" type="password" placeholder="Confirma tu Nueva Contraseña"></input>
                                 </div>
-                                <button className="btn btn-outline-success px-4" style={{borderRadius:"33% 67% 32% 68% / 90% 9% 91% 10% "}} type="button">Actualizar</button>
+                                <button className="btn btn-outline-success px-4" style={{borderRadius:"33% 67% 32% 68% / 90% 9% 91% 10% "}} type="submit">Actualizar</button>
                             </form>
                         </div>
                     </div>

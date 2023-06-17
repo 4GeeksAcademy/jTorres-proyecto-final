@@ -24,7 +24,7 @@ export const RestaurantCard = () => {
                             <div className="footer card-body ms-auto px-auto">
                                 {item.plates.map((element, index)=>{
                                     return(
-                                    <Link key={index} to={`/${element.restaurantName}/${index}`}>
+                                    <Link key={index} to={`/order-food/${index}`}>
                                         <div className="row g-3 gap-3">
                                             <button className="btn btn-outline-primary col fw-bold rounded d-flex align-self-center justify-content-center">
                                                 {element.plateName}

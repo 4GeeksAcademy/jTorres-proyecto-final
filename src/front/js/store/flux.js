@@ -50,7 +50,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					subscription: [
 						{
 							SubscriptionName: "Yamete Kudasai",
-							description: "¡Explora la deliciosa diversidad de la cocina japonesa con nuestra suscripción de sabores diarios! Descubre el auténtico ramen, el exquisito arroz japonés, los irresistibles onigiri y el fresco sushi, ¡una experiencia culinaria única para cada día",
+							description: "¡Yamete Kudasai: Una Experiencia Gastronómica Japonesa Cada Día de la Semana! Delicioso Ramen los Lunes, Sushi los Martes, Arroz Japonés los Miércoles, Bento los Jueves, ¡Y de Nuevo Ramen los Viernes! ¡Disfruta de Sushi los Sábados y Domingos!",
 							price: "20000",
 							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/65d1d1eb-9819-4610-9871-6d8e0ff7a206/DreamShaper_v6_wok_ramen_logo_on_top_right_elegant_marketing_0.jpg",
 						}
@@ -92,8 +92,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/f58af186-c80a-417f-af68-a5680f639561/DreamShaper_v6_McDonalds_food_hamburger_advertising_elegant_we_0.jpg",
 					subscription: [
 						{
-							SubscriptionName: "Italianisimo",
-							description: "Tendras una fabulosa comida variada todos los días!, Lunes Pizza, martes Pasta, miercoles fettucinni, jueves, gnocci, variaremos las combinaciones e ingredientes a lo lagro de la semana, asume lo delicioso y asegura tus sorpresas!",
+							SubscriptionName: "Bien Librado",
+							description: "Con Bien librado, tienes la opción de personalizar tu hamburguesa llamando a nuestro servicio al cliente. Si tienes algún antojo en particular o alguna restricción, estaremos encantados de adaptar tu hamburguesa a tus necesidades.",
 							price: "20000",
 							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/65d1d1eb-9819-4610-9871-6d8e0ff7a206/DreamShaper_v6_wok_ramen_logo_on_top_right_elegant_marketing_0.jpg",
 						}
@@ -138,8 +138,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/ea3c309b-a9b1-4e5a-aac4-35da60887158/DreamShaper_v6_chicken_roaster_smoked_advertising_elegant_webp_0.jpg",
 					subscription: [
 						{
-							SubscriptionName: "Italianisimo",
-							description: "Tendras una fabulosa comida variada todos los días!, Lunes Pizza, martes Pasta, miercoles fettucinni, jueves, gnocci, variaremos las combinaciones e ingredientes a lo lagro de la semana, asume lo delicioso y asegura tus sorpresas!",
+							SubscriptionName: "El Kukulkan",
+							description: "Desde los antiguos tiempos, Kukulkan ha sido venerado como el símbolo de la fuerza y la sabiduría, y ahora, esta magnificencia culinaria está al alcance de tu mano. Su sabor exquisito y su textura sublime te transportarán a un mundo donde la nutrición y el deleite se entrelazan en perfecta armonía.",
 							price: "20000",
 							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/65d1d1eb-9819-4610-9871-6d8e0ff7a206/DreamShaper_v6_wok_ramen_logo_on_top_right_elegant_marketing_0.jpg",
 						}
@@ -182,7 +182,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					subscription: [
 						{
 							SubscriptionName: "Italianisimo",
-							description: "Tendras una fabulosa comida variada todos los días!, Lunes Pizza, martes Pasta, miercoles fettucinni, jueves, gnocci, variaremos las combinaciones e ingredientes a lo lagro de la semana, asume lo delicioso y asegura tus sorpresas!",
+							description: "Sumérgete en un universo de deleite gastronómico, donde cada bocado es una obra maestra cuidadosamente elaborada. Nuestro enfoque principal es consentirte con los platos más destacados de Italia, comenzando con la realeza de la cocina italiana: la Pizza.",
 							price: "20000",
 							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/65d1d1eb-9819-4610-9871-6d8e0ff7a206/DreamShaper_v6_wok_ramen_logo_on_top_right_elegant_marketing_0.jpg",
 						}
@@ -227,8 +227,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/7772b5c6-fc14-4b94-bcdc-8ee42ca9564f/DreamShaper_v6_Mafi_food_advertising_elegant_webpage_blue_gree_1.jpg",
 					subscription: [
 						{
-							SubscriptionName: "Italianisimo",
-							description: "Tendras una fabulosa comida variada todos los días!, Lunes Pizza, martes Pasta, miercoles fettucinni, jueves, gnocci, variaremos las combinaciones e ingredientes a lo lagro de la semana, asume lo delicioso y asegura tus sorpresas!",
+							SubscriptionName: "Almorzar con los peces",
+							description: "Nuestros chefs, expertos en el arte de la cocina mafiosa, crean combinaciones de sabores únicas, mientras que nuestro ambiente íntimo y discreto te sumerge en la atmósfera intrigante de la mafia. Almorzar con los peces es el destino ideal para aquellos que buscan una experiencia culinaria sofisticada y cautivadora que transporta a un mundo de sabor y secretos bien guardados.",
 							price: "20000",
 							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/65d1d1eb-9819-4610-9871-6d8e0ff7a206/DreamShaper_v6_wok_ramen_logo_on_top_right_elegant_marketing_0.jpg",
 						}
@@ -290,16 +290,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			favorites: [
 
-			]
+			],
+			cart: [
+				
+			],
 		},
 		actions: {
 			fetchChatGPT: async (prompt, setIaResponse) => {
 				console.log(JSON.stringify({ prompt }))
 				try {
-					const response = await fetch('http://127.0.0.1:3001/api/createDietChatGPT', {
+					const response = await fetch(`${process.env.BACKEND_URL}/api/createDietChatGPT`, {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
+							"Access-Control-Allow-Origin": "*"
 						},
 						body: JSON.stringify({ prompt })
 					});
