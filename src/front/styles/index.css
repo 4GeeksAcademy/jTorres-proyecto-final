@@ -85,7 +85,11 @@ html{
   background-size: cover;
 }
 .blur{
+  -webkit-backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
+-webkit-backdrop-filter: blur(0.2rem);
   backdrop-filter: blur(0.2rem);
+  
 }
 button:hover{
   background-color: #0fa919;
