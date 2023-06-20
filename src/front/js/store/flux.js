@@ -159,34 +159,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 							plateName: "Pizza con hongos",
 							price: "5",
 							description: "Nuestra pizza está cuidadosamente elaborada con los ingredientes más frescos y de la más alta calidad. Los champiñones, perfectamente cocidos, añaden una textura suave y un sabor terroso que se complementa a la perfección con el queso fundido y derretido.",
-							image: "",
+							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/bccaac5c-edea-4354-9cfa-2b153ceb714e/DreamShaper_v6_Mushroom_pizza_healty_delicious_elegant_italy_f_0.jpg",
 							restaurantName: "La Bella Italia"
 						},
 						{
 							plateName: "Pasta bolognesa",
 							price: "14",
 							description: "Nuestra pasta al dente se combina con una salsa boloñesa casera, cuidadosamente preparada con carne de res jugosa, tomates maduros y una selección de hierbas aromáticas",
-							image: "",
+							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/4c9ff2d5-34df-4cec-8998-f939c52a8cb3/DreamShaper_v6_Pasta_Bolognesa_healty_delicious_elegant_italy_1.jpg",
 							restaurantName: "La Bella Italia"
 						},
 						{
 							plateName: "Fetuccini Alfredo",
 							price: "13",
 							description: "¡Descubre el verdadero placer de la pasta con nuestro exquisito Fettuccini Alfredo! Sumérgete en un mundo de sabores seductores mientras los delicados fettuccini se entrelazan con una cremosa salsa Alfredo, enriquecida con mantequilla suave y queso parmesano fresco. ",
-							image: "",
+							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/c80519f7-ea95-44cf-9c29-cc12ee2c549f/DreamShaper_v6_Fetuccine_Alfredo_healthy_delicious_elegant_ita_1.jpg",
 							restaurantName: "La Bella Italia"
 						},
 						{
 							plateName: "Gnocchi",
 							price: "20",
 							description: "Nuestros Gnocchi son suaves y tiernos, hechos a mano con la receta tradicional que ha pasado de generación en generación. Cada uno de ellos se combina con una exquisita salsa, cuidadosamente elaborada con ingredientes frescos y sabrosos, que se adhieren perfectamente a la textura suave de la pasta.",
-							image: "",
+							image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/68b81234-633e-4f22-a7ad-2de033778801/DreamShaper_v6_Gnocchi_healthy_delicious_elegant_italy_fancy_1.jpg",
 							restaurantName: "La Bella Italia"
 						}
 					],
 					locations: ["Colombia", "Costa"],
-					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/f0184b91-0af6-4288-938f-d80dd922d70f/variations/Default_italian_food_sphaguetti_pizza_lasagna_advertising_eleg_0_f0184b91-0af6-4288-938f-d80dd922d70f_0.png",
-					image2: "https://cdn.leonardo.ai/users/69ecc9ef-db24-4b23-86c3-3d4249c1c0d0/generations/b1aaad11-b38c-461e-8713-3baa6a2a8f2d/variations/Default_Vase_of_flowers_clipart_white_background_scattered_wat_1_b1aaad11-b38c-461e-8713-3baa6a2a8f2d_0.png",
+					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/13006e23-85ee-4be7-8c55-2e73e14a27d9/variations/Default_Pizza_restaurant_logo_for_a_website_elegant_classic_1_13006e23-85ee-4be7-8c55-2e73e14a27d9_0.png",
+					image2: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/798df0c3-a920-4fc4-aad6-3435ec57a36b/DreamShaper_v6_eiffel_tower_beautiful_landscape_elegant_1.jpg",
 					subscription: [
 						{
 							SubscriptionName: "Italianisimo",
@@ -234,7 +234,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Costa"
 					],
 					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/cfee3d8d-1164-4521-a5aa-631d492c5001/variations/Default_generate_a_cake_made_out_of_blueberries_very_elegant_r_0_cfee3d8d-1164-4521-a5aa-631d492c5001_0.png",
-					image2: "https://cdn.leonardo.ai/users/5f209a3e-ed47-4ae0-a74c-d360204db237/generations/135363ea-d6ff-421e-86dc-39ecba705317/variations/Default_full_body_portrait_of_beautiful_female_1900s_gangster_1_135363ea-d6ff-421e-86dc-39ecba705317_0.png",
+					image2: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/6fdd937b-7b95-4e41-bdba-b9d2a534b050/variations/Default_Mafia_woman_with_a_pistol_holstered_elegant_shady_impo_1_6fdd937b-7b95-4e41-bdba-b9d2a534b050_0.png",
 					subscription: [
 						{
 							SubscriptionName: "Almorzar con los peces",
