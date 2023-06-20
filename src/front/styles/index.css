@@ -13,7 +13,7 @@
 }
 body{
 
-  background: linear-gradient(90deg, #c752ee, #000000, #27fecc, #141718);
+  background: linear-gradient(90deg, #8b3aa7, #000000, #5307a4, #141718);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -85,6 +85,7 @@ html{
   background-size: cover;
 }
 .blur{
+  -webkit-backdrop-filter: blur(0.2rem);
   backdrop-filter: blur(0.2rem);
 }
 button:hover{

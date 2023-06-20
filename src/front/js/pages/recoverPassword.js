@@ -17,10 +17,10 @@ export const RecoverPassword = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<div className="card gradient-custom-contrast">
 				<div className="card-header main-title">
 					Salvemos tu contraseña
 				</div>
+			<div className="card gradient-custom-contrast">
 				<div className="card-body">
 					<form onSubmit = {submitForm}>
 						<div className="mb-3 card-title">
