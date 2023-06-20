@@ -31,7 +31,6 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 api = Blueprint("api", __name__)
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-
 @api.route("/login", methods=["POST"])
 def user_login():
     user_email = request.json.get("email")
@@ -51,7 +50,6 @@ def user_login():
     )
     # Retornar el token
     return jsonify({"accessToken": access_token, "refreshToken": refresh_token, "userInfo":user.serialize()})
-
 # Refrescar el token
 @api.route("/refresh", methods=["POST"])
 @jwt_required(refresh=True)
@@ -81,7 +79,6 @@ def user_logout():
     db.session.add(tokenBlocked)
     db.session.commit()
     return jsonify({"msg": "Token revoked"})
-
 # Preguntarle a Arnaldo
 @api.route("/register", methods=["POST"])
 def user_create():
@@ -97,23 +94,17 @@ def user_create():
     new_user = User(
         email=data.get("email"),
         password=secure_password,
-        is_active=True,
-        first_name=data["first_name"],
-        last_name=data["last_name"],
-        birthday=data["birthday"],
-        gender=data["gender"],
-        phone=data["phone"],
-        address=data["address"],
-        address_details=data["address_details"],
-        suscription=data["suscription"],
+        first_name=data.get("first_name"),
+        last_name=data.get("last_name"),
+        birthday=data.get("birthday"),
+        gender=data.get("gender"),
+        phone=data.get("phone"),
+        address=data.get("address"),
+        address_details=data.get("address_details"),
     )
-    new_user = User(email=data["email"], password=secure_password,
-                    is_active=True)
     db.session.add(new_user)
     db.session.commit()
     return jsonify(new_user.serialize()), 201
-
-
 @api.route("/changepassword", methods=["POST"])
 @jwt_required()
 def change_password():
@@ -270,7 +261,7 @@ def user_profile_pic():
 def generateChatResponse():
     prompt = request.json.get("prompt")
     messages = [
-        {"role": "system", "content": "Create a diet plan with the characteristics that the user is going to give you"},
+        {"role": "system", "content": "genera un esquema de alimentacion semanal, dividido por días, desayuno, almuerzo, y comida. Necesito que asistas a un cliente que te respondera en tu siguiente interacción y te pedira un consejo de dieta. Ten su consideración en cuenta e incluye pollo frito, pizza, lasagna, gnochi, ramn, arroz japones, sushi y comida rápida como hamburguesa o papas. da una explicación breve diaria para que el usuario pueda saber que comer cada día en desayuno, almuerzo y cena, teniendo una dieta balanceada y saludable"},
         {"role": "user", "content": prompt}
     ]
     response = openai.ChatCompletion.create(
