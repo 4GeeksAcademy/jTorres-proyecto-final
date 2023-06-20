@@ -37,11 +37,11 @@ export const SubscriptionCard = () => {
                         </div>
                         <div className="my-0 mx-auto d-flex justify-content-evenly mb-4">
                             <Link to="/checkout" className="w-100 px-4">
-                                <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-3 mx-2 fs-7">
+                                <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-3 mx-2 fs-7" onClick={() => actions.addCart(element, index)}>
                                     {element.subscription[0].price}mil Pesos<br></br> compralo Ya!
                                 </button>
                             </Link>
-                            <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-4 mx-2">
+                            <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-4 mx-2" onClick={() => actions.addCart(element, index)}>
                                 Agregar al Carrito
                             </button>
                         </div>
