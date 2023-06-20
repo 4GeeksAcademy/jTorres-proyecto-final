@@ -347,7 +347,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			],
 			cart: [
-				
+
 			],
 			images: [
 				{
@@ -457,14 +457,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			userLogin: async (email, password) => {
-				const resp = await getActions().apiFetch("/login", "POST", { email, password })
-				if (resp.code >= 400) {
-					return resp
+				try {
+					const response = await fetch(`${process.env.BACKEND_URL}/login`, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+							"Access-Control-Allow-Origin": "*"
+						},
+						body: JSON.stringify({ email, password })
+					});
+					if (response.ok) {
+						const data = await response.json();
+						return data;
+					} else {
+						console.error('Error in server response:', response.status, response.statusText);
+					}
+				} catch (error) {
+					console.error('Error in request:', error);
 				}
-				setStore({ accessToken: resp.data.accessToken, pictureUrl: resp.data.userInfo.profilePic })
-				localStorage.setItem("accessToken, resp.data.accessToken")
-				return resp
-
 			},
 			userLogout: async () => {
 				const resp = await getActions().apiFetchProtected("/logout", "POST")
@@ -476,6 +486,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return resp
 
 			},
+			userRegister: async (formData) => {
+				try {
+					// Make an API request to the back-end register endpoint
+					const response = await fetch(`${process.env.BACKEND_URL}/api/register`, {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify(formData)
+					});
+
+					if (response.ok) {
+						// Registration successful
+						console.log("Registration successful");
+						// Redirect the user to the desired page
+					} else {
+						// Registration failed
+						console.error("Registration failed:", response.statusText);
+					}
+				} catch (error) {
+					console.error("Error in request:", error);
+				}
+			},
+
 			loadToken() {
 				let token = localStorage.getItem("accessToken")
 				setStore({ accessToken: token })
@@ -652,16 +686,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					restaurantName: plate.restaurantName,
 					plateIndex: index,
 				}
-				setStore({cart: [...cart, newPlate]})
+				setStore({ cart: [...cart, newPlate] })
 				// console.log(store.cart) cart working as expected
 			},
-			deleteCartItem: (plate, index)=>{
+			deleteCartItem: (plate, index) => {
 				let store = getStore();
 				let cart = store.cart;
 				//cart is pulling data properly
-				let updatedCart= cart.splice(index, 1);
+				let updatedCart = cart.splice(index, 1);
 				console.log(updatedCart)
-								
+
 				setStore({ cart: updatedCart });
 				console.log(cart)
 			},
