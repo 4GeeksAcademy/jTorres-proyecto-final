@@ -546,23 +546,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return { code: resp.status, data }
 
 			},
-			apiFetch: async (endpoint, method = "GET", body = {}) => {
-				let resp = await fetch(apiUrl + endpoint, method == "GET" ? undefined : {
-					method,
-					body: JSON.stringify(body),
-					headers: {
-						"Content-Type": "application/json"
-					}
+			// apiFetch: async (endpoint, method = "GET", body = {}) => {
+			// 	let resp = await fetch(apiUrl + endpoint, method == "GET" ? undefined : {
+			// 		method,
+			// 		body: JSON.stringify(body),
+			// 		headers: {
+			// 			"Content-Type": "application/json"
+			// 		}
 
-				})
-				if (!response.ok) {
-					console.error(`${resp.status}: ${resp.statusText}`)
-					return { code: resp.status, error: `{resp.status}: ${resp.statusText}` }
-				}
-				let data = await resp.json()
-				return { code: resp.status, data }
+			// 	})
+			// 	if (!response.ok) {
+			// 		console.error(`${resp.status}: ${resp.statusText}`)
+			// 		return { code: resp.status, error: `{resp.status}: ${resp.statusText}` }
+			// 	}
+			// 	let data = await resp.json()
+			// 	return { code: resp.status, data }
 
-			},
+			// },
 			apiFetchProtected: async (endpoint, method = "GET", body = {}) => {
 				const apiUrl = process.env.BACKEND_URL
 				let params = {
