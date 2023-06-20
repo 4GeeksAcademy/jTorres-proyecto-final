@@ -22,18 +22,20 @@ export const RestaurantOverview = () => {
     }
 
 	return (
-        <div className="container-fluid bg-dark" style={{paddingTop:"5rem", width: "100%", height: "100vh", paddingBottom: "300vh"}}>
-            <div className="container">
+        <div className="container-fluid bg-transparent" style={{paddingTop:"5rem", width: "100%", height: "100vh", marginBottom: "400vh"}}>
+            <div className="container-fluid">
             <section className="hero py-5 px-1 mx-auto rounded">
             {[restaurant].map((item, index) =>(
-                <div key={index} className="container">
+                <div key={index} className="container-fluid">
                 <div className="row">
                     <div className="col-md-8">
                         <h1 className="display-4 main-title text-light" style={{fontSize:"4rem"}}>{`Bienvenido a ${item.name}`}</h1>
-                        <p className="lead sub-title" style={{fontSize:"2rem"}}>Es hora de pedir algo delicioso, para que llegue a la puerta de tu casa!</p>
+                        <p className="lead sub-title fs-2" style={{fontSize:"2rem"}}>{item.description}</p>
+                        <img src={item.image} 
+                        className="img-fluid rounded"></img>
                     </div>
                     <div className="col-md-4">
-                        <img src={item.image} 
+                        <img src={item.image2} 
                         className="img-fluid rounded"></img>
                     </div>
                 </div>

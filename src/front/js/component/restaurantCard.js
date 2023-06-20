@@ -13,15 +13,16 @@ export const RestaurantCard = () => {
 	return (
         <>
             {store.restaurantes && store.restaurantes.length > 0 && store.restaurantes.map((item, index) =>(
-            <div key={index} className="col card gradient-custom-contrast">   
+            <div key={index} className="col">
+                <div className="card bg-transparent">   
                         <div className="card-img-top mx-0 p-1" alt="{item.url}">
                             <img src={item.image} onError={imgError} className="card-img-top mx-0 p-1 pt-3" alt="restaurantImg"></img>
                             <Link to={`/order-food/${index}`}>
                                 <div className="card-body">
-                                    <h5 className="card-body"><strong>{item.name}</strong></h5>
+                                    <h5 className="card-body sub-title fs-1"><strong>{item.name}</strong></h5>
                                 </div>
                             </Link>
-                            <div className="footer card-body ms-auto px-auto">
+                            {/* <div className="footer card-body ms-auto px-auto">
                                 {item.plates.map((element, index)=>{
                                     return(
                                     <Link key={index} to={`/order-food/${index}`}>
@@ -34,11 +35,12 @@ export const RestaurantCard = () => {
                                     </Link>
                                     )
                                 })}
-                            </div>
+                            </div> */}
                         </div>
+                    </div>
                 </div>
              ))|| <h1 className="main-title gradient-custom">loading...</h1>}
-            </>   
+        </>   
     )
 };
 

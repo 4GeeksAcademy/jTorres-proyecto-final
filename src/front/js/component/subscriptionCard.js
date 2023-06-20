@@ -19,16 +19,17 @@ export const SubscriptionCard = () => {
     return (
         <>
             {store.restaurantes?.map((element, index) => (
-            <div key={index}className="col card bg-dark border border-primary">
+            <div key={index}className="col">
+                <div className="card bg-transparent border border-primary">
                     <div onError={imgError} className="card-img-top mx-0 p-1 m-1 w-100" alt="{item.url}">
                         <img src={element.image} onError={imgError} className="card-img-top mx-0 p-1 pt-3 img-fluid figure-image" alt="restaurantImg" style={{ backgroundSize: "cover" }}></img>
                         <div className="card-bod my-0">
                             <h1 className="card-body text-light d-flex justify-content-center mt-3">
-                                <strong>{element.subscription[0].SubscriptionName}<br></br>Precio: {element.subscription[0].price} Pesos</strong>
+                                <strong>{element.subscription[0].SubscriptionName}<br></br>Precio: {element.subscription[0].price}mil Pesos</strong>
                             </h1>
-                            <button className="btn btn-dark btn-outline-info ms-5 px-3">♡</button>
+                            <button className="btn btn-outline-info ms-5 px-3">♡</button>
                             <Link to="/checkout">
-                                <button className="btn btn-dark btn-outline-info ms-5 px-3 fw-bold">Llévatelo!</button>
+                                <button className="btn btn-outline-info ms-5 px-3 fw-bold">Llévatelo!</button>
                             </Link>
                         </div>
                         <div className="card-text p-5 mt-5 ">
@@ -37,7 +38,7 @@ export const SubscriptionCard = () => {
                         <div className="my-0 mx-auto d-flex justify-content-evenly mb-4">
                             <Link to="/checkout" className="w-100 px-4">
                                 <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-3 mx-2 fs-7">
-                                    {element.subscription[0].price} Pesos<br></br> compralo Ya!
+                                    {element.subscription[0].price}mil Pesos<br></br> compralo Ya!
                                 </button>
                             </Link>
                             <button className="btn btn-outline-primary fw-bold rounded d-flex align-self-center justify-content-center w-100 px-5 py-4 mx-2">
@@ -45,6 +46,7 @@ export const SubscriptionCard = () => {
                             </button>
                         </div>
                     </div>
+                </div>
             </div>
             ))}
         </>

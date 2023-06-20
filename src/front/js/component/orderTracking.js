@@ -79,14 +79,24 @@ export const OrderTracking = () => {
                         <h1 className="sub-title fs-5">
                             Esto es lo que va en camino:
                         </h1>
-                        {/* colocar aca el item.name y el item.price de comida o suscripcion */}
-                        <div className="row row-cols-2">
-                            <div className="fs-4 sub-title">
-                                1x Tarta Destazada
+                        {store.cart && store.cart.length > 0 && store.cart.map((item, index) => {
+                        return (
+                        <>
+                            {/* colocar aca el item.name y el item.price de comida o suscripcion */}
+                            <div className="row row-cols-2">
+                                <div className="fs-4 sub-title">
+                                    - {item.plateName} con un precio de {item.price}mil pesos
+                                </div>
+                                <img className="img-thumbnail icon" style={{ width: "10%", height: "10%" }}
+                                    src={item.image}></img>
                             </div>
-                            <img className="img-thumbnail icon" style={{width: "10%", height: "10%"}}
-                            src="https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/6e212d52-2ff4-42fb-8f97-b463ac7ba2b6/DreamShaper_v5_pasta_bolognese_ketchup_blood_aspect_delicious_0.jpg"></img>
-                        </div>
+                            <div className="text-dark sub-title fs-4">
+                                La suma de tus compras, tiene un valor de:<br></br>
+                                {item.price} mil pesos colombianos
+                            </div>
+                        </>
+                        )
+                        }) || <h1 className="sub-title fs-1">Parece que aun no tienes items!.... :3</h1>}
                     </div>
                 </div>
             </div>

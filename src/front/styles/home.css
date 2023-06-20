@@ -12,3 +12,15 @@
     -webkit-text-fill-color: transparent;
     font-family: 'Cairo Play', sans-serif;
 }
+.hero2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 60px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 40vh;
+    background-image: url("https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/f12b083d-0c3f-4e2f-bcd2-bcfafc3e3fea/variations/Default_Food_subscription_service_delivery_bicycle_1_f12b083d-0c3f-4e2f-bcd2-bcfafc3e3fea_0.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

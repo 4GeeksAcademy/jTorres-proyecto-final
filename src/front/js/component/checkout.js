@@ -18,15 +18,16 @@ export const Checkout = () => {
 
     return (
         <>
-            {store.user && store.user.length > 0 && store.user.map((item, index) => {
-                return (
-                    <div key={index} className="container mt-5">
+                    <div className="container mt-5">
                         {/* payment details page */}
                         <div className="container-fluid">
                             <h1 className="main-title">GitLoot</h1>
                             <p className="sub-title fs-4"><strong>Página de pagos</strong></p>
+                            {store.user && store.user.length > 0 && store.user.map((item, index) => {
+                                return (
+                                    <>
                             {/* billing details */}
-                            <form className="my-5 gradient-custom-contrast py-4 px-3 rounded mx-auto shadow">
+                            <form key={index} className="my-5 gradient-custom-contrast py-4 px-3 rounded mx-auto shadow">
                                 <h1 className="sub-title fs-4">Datos de envío</h1>
                                 {/* (username) */}
                                 <div className="mb-3">
@@ -79,6 +80,9 @@ export const Checkout = () => {
                                 {/* Save changes button */}
                                 <button className="btn btn-outline-success px-4" style={{ borderRadius: "33% 67% 32% 68% / 90% 9% 91% 10% " }} type="button">Guardar</button>
                             </form>
+                            </>
+                            )
+                            }) || <h1 className="main-title">Loading.... :3</h1>}
                         </div>
                         <h1 className="sub-title text-center">Métodos de pago</h1>
                         <div className="mx-auto border rounded border-secondary mt-4 text-center" style={{ width: "18%" }}>
@@ -111,18 +115,24 @@ export const Checkout = () => {
                                         <h1 className="sub-title fs-4">
                                             Esto es lo que vas a comprar:
                                         </h1>
+                                        {store.cart && store.cart.length > 0 && store.cart.map((item, index) => {
+                                return (
+                                    <>
                                         {/* colocar aca el item.name y el item.price de comida o suscripcion */}
                                         <div className="row row-cols-2">
                                             <div className="fs-4 sub-title">
-                                                1x Tarta Destazada con un precio de 30mil pesos
+                                                {item.plateName} con un precio de {item.price}mil pesos
                                             </div>
                                             <img className="img-thumbnail icon" style={{ width: "10%", height: "10%" }}
-                                                src="https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/6e212d52-2ff4-42fb-8f97-b463ac7ba2b6/DreamShaper_v5_pasta_bolognese_ketchup_blood_aspect_delicious_0.jpg"></img>
+                                                src={item.image}></img>
                                         </div>
                                         <div className="text-dark sub-title fs-4">
                                             La suma de tus compras, tiene un valor de:<br></br>
-                                            30mil pesos colombianos
+                                            {item.price} mil pesos colombianos
                                         </div>
+                                        </>
+                            )
+                            }) || <h1 className="sub-title fs-1">Parece que aun no tienes items!.... :3</h1>}
                                         <Link to="/order-tracking">
                                             <button className="btn btn-outline-success fs-4 p-3 w-100">
                                                 Realizar pago
@@ -133,8 +143,6 @@ export const Checkout = () => {
                             </div>
                         </div>
                     </div>
-                )
-            }) || <h1 className="main-title">Loading.... :3</h1>}
         </>
     )
 }

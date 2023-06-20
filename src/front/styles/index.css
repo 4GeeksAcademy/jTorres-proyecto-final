@@ -1,5 +1,32 @@
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+body{
+
+  background: linear-gradient(90deg, #c752ee, #000000, #27fecc, #141718);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  margin-top:20px;
+}
+html{
+  scroll-behavior: smooth;
+}
 .sub-section{
   min-height: 10rem;
+}
+.background-cover{
+  background-image: 50% auto;
 }
 .sub-title{
   background: -webkit-linear-gradient(90deg,#4CB944, #4472CA, #4CB944);
@@ -8,18 +35,6 @@
   -webkit-text-fill-color: transparent;
   font-family: 'Cairo Play', sans-serif;
 }
-/* done */
-body{
-  background-color: #ccfbff;
-  opacity: 1;
-  background-image:  radial-gradient(#54d597 2px, transparent 2px), radial-gradient(#3ba270 2px, #9CE2F3 2px);
-  background-size: 80px 80px;
-  background-position: 0 0,40px 40px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-/* done */
 #navbar-design{
   background-image: linear-gradient(90deg, #9CE2F3 0%, #F7ECE1 8%, #9CE2F3 50%, #F7ECE1 90%, #9ce2f3 100%);
   background-color: linear-gradient(90deg, #9CE2F3 0%, #F7ECE1 8%, #9CE2F3 50%, #F7ECE1 90%, #9ce2f3 100%);
@@ -32,7 +47,7 @@ body{
 }
 .b{
   background-color: #384D48;
-  background-image: url("https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/ff4529c2-3ec9-46ac-86ff-077eafaa29b2/variations/Default_A_futuristic_cityscape_with_a_glowing_AI_core_in_the_0_ff4529c2-3ec9-46ac-86ff-077eafaa29b2_1.jpg");
+  background-image: url("https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/84bc26a6-b576-44cc-8a32-50816bbf8cd4/DreamShaper_v6_A_futuristic_cityscape_with_a_glowing_AI_core_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -110,11 +125,6 @@ button:hover{
   top: 13px;
   }
 
-  body{
-    margin-top:20px;
-    background-color:#f2f6fc;
-    color:#69707a;
-}
 .img-account-profile {
     height: 10rem;
 }

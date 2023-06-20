@@ -30,7 +30,7 @@ export const FoodModal = () => {
                         <strong>{element.plateName}</strong>
                         <button className="btn btn-dark btn-outline-info align-self-end">♡</button>
                     </h1>
-                    <div classname="modal-body">
+                    <div className="modal-body">
                         <img className="img-fluid" src={element.image}></img>
                     </div>
                     </div>
