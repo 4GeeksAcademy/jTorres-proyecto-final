@@ -24,9 +24,9 @@ export const ProfileBilling = () => {
             </nav>
             <hr className="mt-0 mb-4"></hr>
             <div className="row">
-                <div className="col-lg-4 mb-4">
+                <div className="col-lg-4 mb-1">
                     {/* <Billing card 1 */}
-                    <div className="card h-100 border-start-lg border-start-primary gradient-custom-contrast">
+                    <div className="card h-50 border-start-lg border-start-primary gradient-custom-contrast">
                         <div className="card-body">
                             <div className="small text-muted">Pago actual</div>
                             <div className="h3">$20,000</div>
@@ -37,9 +37,9 @@ export const ProfileBilling = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 mb-4 ">
+                <div className="col-lg-4 mb-1">
                     {/* Billing card 2 */}
-                    <div className="card h-100 border-start-lg border-start-secondary gradient-custom-contrast">
+                    <div className="card h-50 border-start-lg border-start-secondary gradient-custom-contrast">
                         <div className="card-body">
                             <div className="small text-muted">Siguiente pago</div>
                             <div className="h3">Julio 15</div>
@@ -50,9 +50,9 @@ export const ProfileBilling = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-4 mb-4">
+                <div className="col-lg-4 mb-1">
                     {/* Billing card 3 */}
-                    <div className="card h-100 border-start-lg border-start-success gradient-custom-contrast">
+                    <div className="card h-50 border-start-lg border-start-success gradient-custom-contrast">
                         <div className="card-body">
                             <div className="small text-muted">Suscripcion actual</div>
                             <div className="h3 d-flex align-items-center">Básica - diaria</div>

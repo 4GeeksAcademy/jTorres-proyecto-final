@@ -31,7 +31,6 @@ export const Register = () => {
 
 
 
-
     return (
         <section className="vh-100 mb-5 pb-5">
 
@@ -226,7 +225,6 @@ export const Register = () => {
                         </div>
                     </div>
                 </div>
-            </div>
 
             <LoginModal />
         </section>
