@@ -456,7 +456,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			userLogin: async (email, password) => {
+			userLogin: async (formData) => {
 				try {
 					const response = await fetch(`${process.env.BACKEND_URL}/login`, {
 						method: 'POST',
@@ -464,7 +464,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							'Content-Type': 'application/json',
 							"Access-Control-Allow-Origin": "*"
 						},
-						body: JSON.stringify({ email, password })
+						body: JSON.stringify({formData})
 					});
 					if (response.ok) {
 						const data = await response.json();
