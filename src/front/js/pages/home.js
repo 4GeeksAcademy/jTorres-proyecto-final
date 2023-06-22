@@ -34,8 +34,8 @@ export const Home = () => {
         navigate("/profile")
         console.log("Login exitoso")
     }
-    function imgError(e){
-        e.target.src="https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/f3918add-a5b5-437e-9bed-186b25ef5636/DreamShaper_v5_3_An_AIpowered_machine_surrounded_by_a_vibr_1.jpg"
+    function imgError(e) {
+        e.target.src = "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/f3918add-a5b5-437e-9bed-186b25ef5636/DreamShaper_v5_3_An_AIpowered_machine_surrounded_by_a_vibr_1.jpg"
     }
 
     return (
@@ -93,12 +93,12 @@ export const Home = () => {
                         <div className="row row-cols-3 g-4">
                             {store.images && store.images.length > 0 && store.images.map((element, index) => {
                                 return (
-                                    <>
+                                    <React.Fragment key={index}>
                                         <div key={index} className="col" style={{ width: "33.333%" }}>
                                             <img className="img-fluid" style={{ borderRadius: "3rem" }} src={element.picture} alt=""></img>
                                             <p className="text-light fs-4 fw-bold text-stroke-dark">{element.text}</p>
                                         </div>
-                                    </>
+                                    </React.Fragment>
                                 )
                             })}
                         </div>
@@ -109,17 +109,17 @@ export const Home = () => {
                 <div className="row">
                     <div className="col position-relative" style={{ width: "33.333%" }}>
                         <img className="img-fluid " style={{ borderRadius: "3rem" }} src="https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/e8191a3f-1099-4681-8a7b-b81280540950/DreamShaper_v6_Final_boss_fight_steampunk_two_legs_and_couldro_0.jpg" alt=""></img>
-                        <p className="sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle" style={{fontSize: "6rem"}}>Vence a tus Enemigos!</p>
+                        <p className="sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle" style={{ fontSize: "6rem" }}>Vence a tus Enemigos!</p>
                         <a className="position-absolute top-0 start-50 translate-middle-x" href="#tienda"><button className="btn btn-outline-info fs-2">Energia a tu antojo</button></a>
                     </div>
                     <div className="col position-relative " style={{ width: "33.333%" }}>
                         <img className="img-fluid" style={{ borderRadius: "3rem" }} src="https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/ff4529c2-3ec9-46ac-86ff-077eafaa29b2/variations/Default_A_futuristic_cityscape_with_a_glowing_AI_core_in_the_0_ff4529c2-3ec9-46ac-86ff-077eafaa29b2_1.jpg" alt=""></img>
-                        <p className="sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle w-75" style={{fontSize: "5rem"}}>La IA de las verduras, se encarga de tus gustos</p>
+                        <p className="sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle w-75" style={{ fontSize: "5rem" }}>La IA de las verduras, se encarga de tus gustos</p>
                         <a className="position-absolute top-0 start-50 translate-middle-x" href="#ia-verduras"><button className="btn btn-outline-info fs-2">vuelve con la ia</button></a>
                     </div>
                     <div className="col position-relative" style={{ width: "33.333%" }}>
                         <img className="img-fluid" style={{ borderRadius: "3rem" }} src="https://cdn.leonardo.ai/users/1005cede-4056-4d26-9586-c81c097af4b9/generations/7b39455c-25f1-4cd9-a08a-cbe68d5052a4/variations/Default_A_portrait_of_a_dog_wearing_sunglasses_and_maximalist_0_7b39455c-25f1-4cd9-a08a-cbe68d5052a4_1.jpg" alt=""></img>
-                        <p className=" sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle"  style={{fontSize: "5rem"}}>Nosotros te lo llevamos a tu casa</p>
+                        <p className=" sub-title text-light fw-bold text-stroke-dark position-absolute top-50 start-50 translate-middle" style={{ fontSize: "5rem" }}>Nosotros te lo llevamos a tu casa</p>
                         <a className="position-absolute top-0 start-50 translate-middle-x" href="#tienda"><button className="btn btn-outline-info fs-2">La comida llega a ti</button></a>
                     </div>
                 </div>
@@ -134,23 +134,23 @@ export const Home = () => {
                 </Link>
             </section>
             <section>
-            <div className="row row-cols-3 g-5">
+                <div className="row row-cols-3 g-5">
                     <>
-                    {store.restaurantes && store.restaurantes.length > 0 && store.restaurantes.map((item, index) =>(
-                        <div key={index} className="col">
-                            <div className="card bg-transparent">   
-                                <div className="card-img-top mx-0 p-1" alt="{item.url}">
-                                    <img src={item.image} onError={imgError} className="card-img-top mx-0 p-1 pt-3" alt="restaurantImg"></img>
-                                    <Link to={`/order-food/${index}`}>
-                                        <div className="card-body">
-                                            <h5 className="card-body sub-title fs-1"><strong>{item.name}</strong></h5>
-                                        </div>
-                                    </Link>
+                        {store.restaurantes && store.restaurantes.length > 0 && store.restaurantes.map((item, index) => (
+                            <div key={index} className="col">
+                                <div className="card bg-transparent">
+                                    <div className="card-img-top mx-0 p-1" alt="{item.url}">
+                                        <img src={item.image} onError={imgError} className="card-img-top mx-0 p-1 pt-3" alt="restaurantImg"></img>
+                                        <Link to={`/order-food/${index}`}>
+                                            <div className="card-body">
+                                                <h5 className="card-body sub-title fs-1"><strong>{item.name}</strong></h5>
+                                            </div>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        ))|| <h1 className="main-title gradient-custom">loading...</h1>}
-                    </>   
+                        )) || <h1 className="main-title gradient-custom">loading...</h1>}
+                    </>
                 </div>
             </section>
             <LoginModal />

@@ -5,8 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 
 		store: {
-			message: [
-				"Parece que funciona...  (?) valor anterior era null y no referenciaba al backend"
+			accessToken: [
 			],
 			pictureUrl: null,
 			restaurantes: [
@@ -295,22 +294,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			user: [
 				{
-					displayName: "Alepina",
-					firstName: "Alejandra",
-					secondName: "Martinez",
+					displayName: "",
+					firstName: "",
+					secondName: "",
 					address: "",
 					addressDetail: "",
-					gender: "femenino",
-					email: "askingalessa@gfake.com",
-					phone: "3005562343",
+					gender: "",
+					email: "",
+					phone: "",
 					login: false,
 					image: "https://cdn.leonardo.ai/users/25acf724-d0fb-44e7-8da5-a5932af5eac9/generations/5d52955e-942f-44f3-8686-94611922d455/DreamShaper_v5_3_An_AIpowered_android_woman_with_celticlik_0.jpg",
-					invoiceHistory: [
+					/* invoiceHistory: [
 						{
-							invoiceNumber: "39201",
-							invoiceDate: "15/06/2021",
-							Quantity: "30000",
-							invoiceStatus: "Pending",
+							invoiceNumber: "",
+							invoiceDate: "",
+							Quantity: "",
+							invoiceStatus: "",
 							refunded: false
 						}
 					],
@@ -340,7 +339,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							optIn: false,
 							multiFactorEmail: "askingalessa@gfake.com"
 						}
-					]
+					] */
 				}
 			],
 			favorites: [
@@ -458,7 +457,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			userLogin: async (email, password) => {
 				try {
-					const response = await fetch(`${process.env.BACKEND_URL}/login`, {
+					const response = await fetch(`${process.env.BACKEND_URL}/api/login`, {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
@@ -477,7 +476,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			userLogout: async () => {
-				const resp = await getActions().apiFetchProtected("/logout", "POST")
+				const resp = await getActions().apiFetchProtected("/api/logout", "POST")
 				if (resp.code >= 400) {
 					return resp
 				}
